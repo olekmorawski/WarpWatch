@@ -20,7 +20,7 @@ async function main() {
   console.log(`Connected to node, wallet address is ${bundlr.address}`);
 
   // 4. Calculate and display the cost of uploading a specific file.
-  const pathToFile = "tests/img.jpg";
+  const pathToFile = "styles/img/img.jpg";
   const { size } = await fs.promises.stat(pathToFile);
   const price = await bundlr.getPrice(size);
   const priceConverted = bundlr.utils.fromAtomic(price);
@@ -37,7 +37,9 @@ async function main() {
 
   // 6. Upload the file and display the resulting URL.
   const uploadTx = await bundlr.uploadFile(pathToFile);
-  console.log(`File uploaded to URL= https://areweave.net/${uploadTx.id}`);
+  console.log(
+    `File uploaded to URL= https://devnet.bundlr.network/tx/${uploadTx.id}/data`
+  );
 
   // 7. Show balance again
   console.log(`account funded with decimal balance ${decimalBalance}`);
