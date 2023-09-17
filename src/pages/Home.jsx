@@ -1,14 +1,12 @@
 import React from "react";
-import FileUpload from "../components/FileUpload";
+import Nav from "../components/Nav";
 
-function Home() {
+const Home = () => {
   return (
     <div>
-      <h1>Welcome to the Home Page!</h1>
-      <p>This is the default React Home Page.</p>
-      <FileUpload />
+      <Nav />
     </div>
   );
-}
+};
 
 export default Home;
