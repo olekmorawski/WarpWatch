@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-async function main() {
+async function uploadToBundlr() {
   // 1. Connect to the Bundlr network.
   const bundlr = new Bundlr(
     "https://devnet.bundlr.network",
@@ -45,4 +45,4 @@ async function main() {
   console.log(`account funded with decimal balance ${decimalBalance}`);
 }
 
-main();
+uploadToBundlr();
